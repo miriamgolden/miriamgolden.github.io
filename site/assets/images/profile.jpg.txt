@@ -1,3 +1,0 @@
-PLACEHOLDER: Replace this with your actual profile photo.
-Save your photo as "profile.jpg" in this folder (assets/images/).
-Recommended size: 400x400 pixels or similar.
