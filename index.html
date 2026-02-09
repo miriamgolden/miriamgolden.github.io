@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miriam A. Golden</title>
+<style>
+  /* Reset */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: #1a6db0; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .wrapper {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .header { padding: 32px 0 8px; }
+  .header h1 { font-size: 26px; font-weight: 700; color: #111; margin: 0; }
+  .header h1 a { color: #111; text-decoration: none; }
+  .header h1 a:hover { color: #1a6db0; text-decoration: none; }
+
+  .nav { padding: 6px 0 20px; }
+  .nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 24px; }
+  .nav a { font-size: 15px; color: #333; text-decoration: none; padding: 2px 0; }
+  .nav a:hover { color: #1a6db0; }
+  .nav a.active { color: #1a6db0; font-weight: 600; }
+
+  .rule { border: none; border-top: 1px solid #ddd; margin: 0 0 28px; }
+
+  .content { padding-bottom: 40px; min-height: 50vh; }
+
+  /* Home layout */
+  .home-grid {
+    display: grid; grid-template-columns: 1fr 200px;
+    gap: 28px; align-items: start; margin-bottom: 20px;
+  }
+  .bio p { margin-bottom: 14px; font-size: 15px; line-height: 1.7; }
+  .photo img { width: 200px; height: auto; border-radius: 2px; }
+  .photo-placeholder {
+    width: 200px; height: 250px; background: #f0f0f0; border: 1px solid #ddd;
+    border-radius: 2px; display: flex; align-items: center; justify-content: center;
+    font-size: 12px; color: #999; text-align: center; padding: 12px;
+  }
+
+  /* Sections */
+  .section h2 { font-size: 17px; font-weight: 700; color: #111; margin: 28px 0 10px; }
+  .section ul { list-style: disc; padding-left: 20px; margin-bottom: 12px; }
+  .section li { margin-bottom: 4px; font-size: 14.5px; }
+
+  /* Page headings */
+  .page-title { font-size: 20px; font-weight: 700; color: #111; margin: 0 0 20px; }
+
+  /* Publication entries */
+  .pub-entry { margin-bottom: 22px; }
+  .pub-entry p { margin-bottom: 4px; font-size: 14.5px; line-height: 1.65; }
+  .pub-entry .title { font-weight: 600; }
+  .pub-entry .meta { font-size: 13.5px; color: #555; }
+  .pub-entry .award { font-size: 13px; color: #8b6914; font-style: italic; margin-top: 4px; }
+  .pub-entry .abstract { font-size: 13.5px; color: #555; margin-top: 6px; line-height: 1.6; }
+  .pub-entry .news { font-size: 13px; color: #666; margin-top: 4px; }
+
+  /* Research working papers */
+  .wp-entry { margin-bottom: 28px; }
+  .wp-entry h3 { font-size: 15.5px; font-weight: 600; color: #111; margin-bottom: 4px; }
+  .wp-entry .coauthors { font-size: 13.5px; color: #555; margin-bottom: 6px; }
+  .wp-entry .abstract { font-size: 14px; color: #444; line-height: 1.65; }
+  .wp-entry .download { font-size: 13px; margin-top: 6px; }
+
+  /* Student lists */
+  .student-entry { margin-bottom: 14px; }
+  .student-entry .name { font-weight: 600; font-size: 14.5px; }
+  .student-entry .details { font-size: 13.5px; color: #555; margin-left: 0; }
+
+  /* Profile links row */
+  .profile-links { list-style: none !important; padding-left: 0 !important; display: flex; flex-wrap: wrap; gap: 12px; margin: 8px 0 16px; }
+  .profile-links li { margin: 0; }
+  .profile-links a { font-size: 14px; font-weight: 500; }
+
+  /* Footer */
+  .footer { border-top: 1px solid #ddd; padding: 20px 0; margin-top: 24px; }
+  .footer-nav { list-style: none; display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 8px; }
+  .footer-nav a { font-size: 13px; color: #666; }
+  .footer-nav a:hover { color: #1a6db0; }
+  .footer p { font-size: 12.5px; color: #888; margin-bottom: 3px; }
+  .footer a { color: #888; }
+  .footer a:hover { color: #1a6db0; }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .home-grid { grid-template-columns: 1fr; }
+    .photo { order: -1; text-align: center; }
+    .photo img, .photo-placeholder { width: 160px; height: auto; }
+    .nav ul { gap: 2px 16px; }
+  }
+</style>
+</head>
+<body id="top">
+
+<div class="wrapper">
+
+  <header class="header">
+    <h1><a href="index.html">Miriam A. Golden</a></h1>
+  </header>
+
+  <nav class="nav">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="books.html">Publications</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="assets/pdf/golden-cv.pdf">CV</a></li>
+      <li><a href="https://dataverse.harvard.edu/dataverse/golden">Data</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+    </ul>
+  </nav>
+
+  <hr class="rule">
+
+  <main class="content">
+    <div class="home-grid">
+      <div class="bio">
+        <p>Miriam A. Golden is a Visiting Scholar at the <a href="https://cddrl.fsi.stanford.edu/">Center on Democracy, Development and the Rule of Law</a> in the Freeman Spogli Institute at <a href="https://stanford.edu">Stanford University</a>, where she is actively involved in the newly-established <a href="https://cddrl.fsi.stanford.edu/dal">Democracy Action Lab</a>. She is also a Research Professor at the <a href="https://polisci.ucla.edu">University of California at Los Angeles</a>.</p>
+
+        <p>Between 2019 and 2024, Golden held the Peter Mair Chair of Comparative Politics in the Department of Social and Political Sciences at the <a href="https://www.eui.eu/en/academic-units/political-and-social-sciences">European University Institute</a>. Prior to her 2019 move to the EUI, she taught at UCLA.</p>
+
+        <p>Golden is currently completing a book manuscript entitled <em>Capacity Gaps: Reelection and Governance Around the World</em> that emerged out of data showing that legislator reelection increases with economic development. An initial publication from this project, co-authored with <a href="https://enazrullaeva.github.io/">Eugenia Nazrullaeva</a>, appeared as <a href="https://www.cambridge.org/core/elements/abs/puzzle-of-clientelism/88A948968E0C25B29A31BCDEB2DCE4DF"><em>The Puzzle of Clientelism</em></a> in 2023 (Cambridge University Press).</p>
+
+        <p>Golden's work has been honored with the <a href="https://connect.apsanet.org/s3/jewell-loewenberg-prize/">Jewell-Loewenberg Prize</a>, the <a href="https://connect.apsanet.org/groups/representation-and-electoral-systems-section-8/">Lawrence Longley Award</a>, the <a href="https://www.apsanet.org/section20/s20">Gregory A. Leubbert Book Award</a> (runner-up), a Choice Award, and the Gabriel A. Almond Award for the best dissertation in comparative politics. Most recently, she is a recipient of the 2025 Lijphart/Przeworski/Verba Data Set Award for the <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/U1ZNVT">Global Legislator Database</a>.</p>
+
+        <p>Golden is a Fellow of the John Simon Guggenheim Memorial Foundation and an Associate Member of Nuffield College at the University of Oxford. She is an affiliate of the <a href="http://cega.berkeley.edu/">Center for Effective Global Action (CEGA)</a> at UC Berkeley, a Research Fellow at the <a href="http://cerp.org.pk/">Center for Economic Research in Pakistan (CERP)</a>, and an active member of <a href="http://egap.org/">Evidence in Governance and Politics (EGAP)</a>.</p>
+
+        <p>You can see one measure of the impact of Golden's scholarly work on her <a href="https://scholar.google.com/citations?user=KPqotRwAAAAJ&hl=en">Google Scholar profile</a>.</p>
+      </div>
+
+      <div class="photo">
+        <div class="photo-placeholder">Your photo<br>will go here</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Affiliations &amp; Contact</h2>
+      <ul>
+        <li>Visiting Scholar, <a href="https://cddrl.fsi.stanford.edu/">Center on Democracy, Development and the Rule of Law</a>, <a href="https://stanford.edu">Stanford University</a></li>
+        <li>Research Professor, <a href="https://polisci.ucla.edu">University of California at Los Angeles</a></li>
+        <li>Email: <a href="mailto:golden@ucla.edu">golden@ucla.edu</a> or <a href="mailto:magolden@stanford.edu">magolden@stanford.edu</a></li>
+      </ul>
+
+      <ul class="profile-links">
+        <li><a href="mailto:golden@ucla.edu">Email</a></li>
+        <li><a href="https://scholar.google.com/citations?user=KPqotRwAAAAJ&hl=en">Google Scholar</a></li>
+        <li><a href="https://orcid.org/0000-0002-3408-1107">ORCID</a></li>
+        <li><a href="https://bsky.app/profile/mgoldenprof.bsky.social">Bluesky</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="books.html">Publications</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="assets/pdf/golden-cv.pdf">Curriculum Vitae</a></li>
+        <li><a href="https://dataverse.harvard.edu/dataverse/golden">Data (Harvard Dataverse)</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <ul class="footer-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="books.html">Publications</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="assets/pdf/golden-cv.pdf">CV</a></li>
+    </ul>
+    <p>&copy; 2025 Miriam A. Golden. All rights reserved.</p>
+    <p>Site analytics by <a href="https://miriamgolden.goatcounter.com">GoatCounter</a>. No personal data or cookies are stored.</p>
+    <p><a href="#top">Back to top</a></p>
+  </footer>
+
+</div>
+
+<script data-goatcounter="https://miriamgolden.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
